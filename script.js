@@ -3,7 +3,7 @@
 var alt = 0;
 var larg = 0;
 var vidas = 1;
-var tempo = 10;
+var tempo = 15;
 
 function ajustarTamanho() {
     alt = window.innerHeight;
