@@ -2,6 +2,7 @@
 
 var alt = 0;
 var larg = 0;
+var vidas = 1;
 
 function ajustarTamanho() {
     alt = window.innerHeight;
@@ -16,9 +17,16 @@ ajustarTamanho();
 function posicaoRandom() {
 
     // remover o mosquito, para que nao fique poluindo a tela, caso exista.
-
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove();
+
+        if (vidas > 3){
+            window.alert('Game over!');
+        } else {
+            document.getElementById('v' + vidas).src="/image/coracao_vazio.png";
+            vidas++;
+        }
+
     }
     
 
@@ -39,6 +47,10 @@ function posicaoRandom() {
     mosquito.style.top = posicaoY + 'px'; // em pixel, ao topo
     mosquito.style.position = 'absolute'; // posição absoluta
     mosquito.id = 'mosquito'
+    mosquito.onclick = function() {
+        this.remove();
+    } //remover o html pelo click, por causa disso o jogador nao perderá vida.
+
     document.body.appendChild(mosquito); //acessando o body da page e incluindo o que acabamos de criar
 
 }
