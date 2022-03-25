@@ -7,8 +7,18 @@ function ajustarTamanho() {
     alt = window.innerHeight;
     larg = window.innerWidth;
 
-    console.log(alt, larg);
+    console.log(larg, alt);
 }
 
 ajustarTamanho();
+
+var posicaoX = Math.floor(Math.random() * larg);
+var posicaoY = Math.floor(Math.random() * alt);
+console.log(posicaoX, posicaoY);
+
+//criando o elemento html
+
+var mosq = document.createElement('img'); //de fato, criando o elemento
+mosq.src = 'image/mosca.png'; //atribuindo os atributos que queremos
+document.body.appendChild(mosq); //acessando o body da page e incluindo o que acabamos de criar
 
