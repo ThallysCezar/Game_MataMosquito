@@ -12,13 +12,20 @@ function ajustarTamanho() {
 
 ajustarTamanho();
 
-var posicaoX = Math.floor(Math.random() * larg);
-var posicaoY = Math.floor(Math.random() * alt);
-console.log(posicaoX, posicaoY);
+function posicaoRandom() {
+    var posicaoX = Math.floor(Math.random() * larg);
+    var posicaoY = Math.floor(Math.random() * alt);
+    console.log(posicaoX, posicaoY);
 
-//criando o elemento html
+    //criando o elemento html
 
-var mosq = document.createElement('img'); //de fato, criando o elemento
-mosq.src = 'image/mosca.png'; //atribuindo os atributos que queremos
-document.body.appendChild(mosq); //acessando o body da page e incluindo o que acabamos de criar
+    var mosquito = document.createElement('img'); //de fato, criando o elemento
+    mosquito.src = 'image/mosca.png'; //atribuindo os atributos que queremos
+    mosquito.className = 'mosquito1'; //atribuindo uma classe desejada
+    mosquito.style.left = posicaoX + 'px'; // em pixel, a esquerda
+    mosquito.style.top = posicaoY + 'px'; // em pixel, ao topo
+    mosquito.style.position = 'absolute'; // posição absoluta
+    document.body.appendChild(mosquito); //acessando o body da page e incluindo o que acabamos de criar
+}
+
 
