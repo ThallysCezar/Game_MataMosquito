@@ -22,11 +22,14 @@
             <img id="v3" src="image/coracao_cheio.png">
         </div>
 
-        <div class="crono">Tempo restante : ?</div>
+        <div class="crono">Tempo restante : <span id="cronometro"></span></div>
 
     </div>
     <script>
-        setInterval(function(){
+
+        document.getElementById('cronometro').innerHTML = tempo;
+
+        var criarMosquito = setInterval(function(){
             posicaoRandom();
         },
         2000);
