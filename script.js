@@ -3,7 +3,7 @@
 var alt = 0;
 var larg = 0;
 
-function ajustarTamanho(){
+function ajustarTamanho() {
     alt = window.innerHeight;
     larg = window.innerWidth;
 
