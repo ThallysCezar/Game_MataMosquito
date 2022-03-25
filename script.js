@@ -14,6 +14,14 @@ function ajustarTamanho() {
 ajustarTamanho();
 
 function posicaoRandom() {
+
+    // remover o mosquito, para que nao fique poluindo a tela, caso exista.
+
+    if(document.getElementById('mosquito')){
+        document.getElementById('mosquito').remove();
+    }
+    
+
     var posicaoX = Math.floor(Math.random() * larg) - 90; // limitando com esse -90, para nao estourar e a imagem passar
     var posicaoY = Math.floor(Math.random() * alt) - 90;
     console.log(posicaoX, posicaoY);
@@ -30,6 +38,7 @@ function posicaoRandom() {
     mosquito.style.left = posicaoX + 'px'; // em pixel, a esquerda
     mosquito.style.top = posicaoY + 'px'; // em pixel, ao topo
     mosquito.style.position = 'absolute'; // posição absoluta
+    mosquito.id = 'mosquito'
     document.body.appendChild(mosquito); //acessando o body da page e incluindo o que acabamos de criar
 
 }
