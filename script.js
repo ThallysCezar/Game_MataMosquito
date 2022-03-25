@@ -26,11 +26,25 @@ function posicaoRandom() {
 
     var mosquito = document.createElement('img'); //de fato, criando o elemento
     mosquito.src = 'image/mosca.png'; //atribuindo os atributos que queremos
-    mosquito.className = 'mosquito1'; //atribuindo uma classe desejada
+    mosquito.className = tamanhoAleatorio(); //atribuindo uma classe desejada
     mosquito.style.left = posicaoX + 'px'; // em pixel, a esquerda
     mosquito.style.top = posicaoY + 'px'; // em pixel, ao topo
     mosquito.style.position = 'absolute'; // posição absoluta
     document.body.appendChild(mosquito); //acessando o body da page e incluindo o que acabamos de criar
+
 }
 
+// criando função para tamanhos aleatorios do mosquito
+function tamanhoAleatorio() {
+    var classe = Math.floor(Math.random() * 3);
+
+    switch(classe) {
+        case 0:
+            return 'mosquito1';
+        case 1:
+            return 'mosquito2';
+        case 2:
+            return 'mosquito3';
+    }
+}
 
