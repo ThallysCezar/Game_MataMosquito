@@ -5,6 +5,24 @@ var larg = 0;
 var vidas = 1;
 var tempo = 15;
 
+var criarMosquitoTempo = 1500;
+
+var nivel = window.location.search;
+nivel = nivel.replace('?', '');
+
+if(nivel === 'easy'){
+    //1500
+    criarMosquitoTempo = 1500;
+
+} else if(nivel === 'normal') {
+    //1000
+    criarMosquitoTempo = 1000;
+
+} else {
+    //750
+    criarMosquitoTempo = 750;
+}
+
 function ajustarTamanho() {
     alt = window.innerHeight;
     larg = window.innerWidth;
