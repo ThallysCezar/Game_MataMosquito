@@ -7,14 +7,17 @@ function ajustarTamanho() {
     alt = window.innerHeight;
     larg = window.innerWidth;
 
+    posicaoX = posicaoX < 0 ? 0 : posicaoX; // isso é para nao ficar na posicao 0 e nao aparecer a imagem, para nao acontecer isso, tem que fazer essa atribuição com operador ternario.
+    posicaoY = posicaoY < 0 ? 0 : posicaoY;
+
     console.log(larg, alt);
 }
 
 ajustarTamanho();
 
 function posicaoRandom() {
-    var posicaoX = Math.floor(Math.random() * larg);
-    var posicaoY = Math.floor(Math.random() * alt);
+    var posicaoX = Math.floor(Math.random() * larg) - 90; // limitando com esse -90, para nao estourar e a imagem passar
+    var posicaoY = Math.floor(Math.random() * alt) - 90;
     console.log(posicaoX, posicaoY);
 
     //criando o elemento html
